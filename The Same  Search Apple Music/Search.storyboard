@@ -112,6 +112,9 @@
                                                             <real key="value" value="19"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="artistUrlAction:" destination="ljG-qb-ouC" eventType="touchUpInside" id="bvi-Lp-OSD"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -238,6 +241,9 @@
                                                                     <real key="value" value="18"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="playButtonAction:" destination="ljG-qb-ouC" eventType="touchUpInside" id="bIR-oa-hY4"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsG-pI-FTR">
                                                             <rect key="frame" x="163" y="0.0" width="40" height="35"/>
@@ -255,6 +261,9 @@
                                                                     <real key="value" value="18"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="stopButtonAction:" destination="ljG-qb-ouC" eventType="touchUpInside" id="YRl-vT-5pF"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
