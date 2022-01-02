@@ -10,8 +10,7 @@ extension SearchDetails : UICollectionViewDelegate, UICollectionViewDataSource,U
     
    
      func configureCollection(){
-        CollectionView.delegate = self
-        CollectionView.dataSource = self
+        
         let nib = UINib(nibName: Constant.searchDetailsCell, bundle: nil)
         CollectionView.register(nib, forCellWithReuseIdentifier: Constant.searchDetailsCell)
         snapHorizontal()
@@ -19,6 +18,8 @@ extension SearchDetails : UICollectionViewDelegate, UICollectionViewDataSource,U
     
     
      func snapHorizontal(){
+        CollectionView.delegate = self
+        CollectionView.dataSource = self
        CollectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
         CollectionView.decelerationRate = .fast
         let layout = BetterSnappingLayout()

@@ -12,13 +12,10 @@ class NetworkManger {
     static let shared = NetworkManger()
     
 
-    
     func searchResultMusic(searchText:String,completion: @escaping (Result<SearchResult , ResoneError>) -> Void){
         let urlString = "https://itunes.apple.com/search?term=\(searchText)&entity=musicVideo"
-           // URLS.main + "/search?term=\(searchText)&entity=musicVeido"
         fetchGenericJSONData(urlString: urlString, completion: completion)
     }
-    
     
     
     func fetchGenericJSONData<T:Codable>(urlString:String,completion: @escaping (Result<T , ResoneError>) -> Void){
@@ -47,4 +44,6 @@ class NetworkManger {
                 completion(.failure(.invalidData))
             }
         }.resume()
-    }}
+    }
+    
+}

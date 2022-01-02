@@ -26,23 +26,23 @@ class SearchDetails: UITableViewController {
     
     var msuicName = [DataResult]()
     var musicDetails: DataResult?
+    
     var urlArtistMusic = ""
 
     var avpController = AVPlayerViewController()
     var player: AVPlayer?
+    
     var headerView: UIView!
     let headerHeight: CGFloat = 300
     
 
     
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
+       // title  = musicDetails?.artistName
         configureCollection()
-        headerView = tableView.tableHeaderView
-        tableView.tableHeaderView = nil
-        tableView.addSubview(headerView)
-        tableView.contentInset = UIEdgeInsets(top: headerHeight, left: 0, bottom: 0, right: 0)
-        tableView.contentOffset = CGPoint(x: 0, y: -headerHeight)
+        CustomTableHeaderView()
         updateHeader()
     }
     
@@ -52,16 +52,9 @@ class SearchDetails: UITableViewController {
     }
     
     
+   
     fileprivate func fetchMusicData() {
-        artistImage.sd_setImage(with: URL(string: musicDetails?.artworkUrl100 ?? ""))
-        nameArtist.text = musicDetails?.artistName
-        trackNameLabel.text = musicDetails?.trackName
-        fetchUrlMusicVideo(urlString: musicDetails?.previewUrl ?? "")
-        urlArtistMusic   = musicDetails?.artistViewUrl ?? ""
-        country.text = musicDetails?.country
-        primaryGenreName.text = musicDetails?.primaryGenreName
-        trackPrice.text = "\(String(musicDetails?.trackPrice ?? 0 )) USD"
-        releaseDate.text = musicDetails?.releaseDate?.convertToDisplayFormat()
+        contingDataView()
         showLoadingView()
       
         NetworkManger.shared.searchResultMusic(searchText: musicDetails?.artistName ?? "") { [weak self] result in
@@ -81,6 +74,18 @@ class SearchDetails: UITableViewController {
                 
             }
         }
+    }
+    
+    fileprivate func contingDataView() {
+        artistImage.sd_setImage(with: URL(string: musicDetails?.artworkUrl100 ?? ""))
+        nameArtist.text = musicDetails?.artistName
+        trackNameLabel.text = musicDetails?.trackName
+        fetchUrlMusicVideo(urlString: musicDetails?.previewUrl ?? "")
+        urlArtistMusic   = musicDetails?.artistViewUrl ?? ""
+        country.text = musicDetails?.country
+        primaryGenreName.text = musicDetails?.primaryGenreName
+        trackPrice.text = "\(String(musicDetails?.trackPrice ?? 0 )) $"
+        releaseDate.text = musicDetails?.releaseDate?.convertToDisplayFormat()
     }
     
     
@@ -122,16 +127,18 @@ class SearchDetails: UITableViewController {
         }
     }
 
-   
+    fileprivate func CustomTableHeaderView() {
+        headerView = tableView.tableHeaderView
+        tableView.tableHeaderView = nil
+        tableView.addSubview(headerView)
+        tableView.contentInset = UIEdgeInsets(top: headerHeight, left: 0, bottom: 0, right: 0)
+        tableView.contentOffset = CGPoint(x: 0, y: -headerHeight)
+    }
+    
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         updateHeader()
     }
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if msuicName.isEmpty{
-//            CollectionView.isHidden = true
-//            
-//        }
-//    }
+
 }
 
