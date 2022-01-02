@@ -3,13 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B2E6506F27801D15001574B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E6506E27801D15001574B8 /* AppDelegate.swift */; };
-		B2E6507327801D15001574B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E6507227801D15001574B8 /* ViewController.swift */; };
-		B2E6507627801D15001574B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2E6507427801D15001574B8 /* Main.storyboard */; };
 		B2E6507827801D15001574B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E6507727801D15001574B8 /* Assets.xcassets */; };
 		B2E6507B27801D15001574B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2E6507927801D15001574B8 /* LaunchScreen.storyboard */; };
 		B2E6508927801DA4001574B8 /* Helper+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E6508727801DA3001574B8 /* Helper+Ext.swift */; };
@@ -30,13 +28,16 @@
 		B2E650C027801EF9001574B8 /* SearchDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E650BC27801EF9001574B8 /* SearchDetailsCell.swift */; };
 		B2E650C327801EF9001574B8 /* SearchDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E650BF27801EF9001574B8 /* SearchDetailsCell.xib */; };
 		B2E650D127801F53001574B8 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2E650D027801F52001574B8 /* Search.storyboard */; };
+		B2F25F8C27816D50003D8E48 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B2F25F8B27816D50003D8E48 /* IQKeyboardManagerSwift */; };
+		B2F25F9027816D73003D8E48 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = B2F25F8F27816D73003D8E48 /* Toast */; };
+		B2F25F9427816DAB003D8E48 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B2F25F9327816DAB003D8E48 /* SDWebImage */; };
+		B2F25F9927816E0B003D8E48 /* string+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F25F9727816E0B003D8E48 /* string+EXT.swift */; };
+		B2F25F9A27816E0B003D8E48 /* date+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F25F9827816E0B003D8E48 /* date+EXT.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B2E6506B27801D14001574B8 /* The Same  Search Apple Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Same  Search Apple Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E6506E27801D15001574B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B2E6507227801D15001574B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B2E6507527801D15001574B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2E6507727801D15001574B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2E6507A27801D15001574B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2E6507C27801D15001574B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +59,8 @@
 		B2E650BC27801EF9001574B8 /* SearchDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDetailsCell.swift; sourceTree = "<group>"; };
 		B2E650BF27801EF9001574B8 /* SearchDetailsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchDetailsCell.xib; sourceTree = "<group>"; };
 		B2E650D027801F52001574B8 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		B2F25F9727816E0B003D8E48 /* string+EXT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "string+EXT.swift"; sourceTree = "<group>"; };
+		B2F25F9827816E0B003D8E48 /* date+EXT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "date+EXT.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2F25F9427816DAB003D8E48 /* SDWebImage in Frameworks */,
+				B2F25F9027816D73003D8E48 /* Toast in Frameworks */,
+				B2F25F8C27816D50003D8E48 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,15 +96,14 @@
 		B2E6506D27801D14001574B8 /* The Same  Search Apple Music */ = {
 			isa = PBXGroup;
 			children = (
+				B2E6508627801D89001574B8 /* Delegate */,
+				B2E6508427801D6B001574B8 /* Model */,
 				B2E6509E27801E27001574B8 /* NetworkManger */,
 				B2E6509527801DED001574B8 /* CustomViews */,
-				B2E6508D27801DBC001574B8 /* Utilities */,
-				B2E6508627801D89001574B8 /* Delegate */,
-				B2E6508527801D72001574B8 /* Extension */,
-				B2E6508427801D6B001574B8 /* Model */,
 				B2E650A727801E4C001574B8 /* Controllers */,
-				B2E6507427801D15001574B8 /* Main.storyboard */,
-				B2E650D027801F52001574B8 /* Search.storyboard */,
+				B2F25F9F278177BD003D8E48 /* StoryBoard */,
+				B2E6508527801D72001574B8 /* Extension */,
+				B2E6508D27801DBC001574B8 /* Utilities */,
 				B2E6508C27801DAE001574B8 /* Supporting */,
 			);
 			path = "The Same  Search Apple Music";
@@ -116,6 +121,8 @@
 		B2E6508527801D72001574B8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				B2F25F9827816E0B003D8E48 /* date+EXT.swift */,
+				B2F25F9727816E0B003D8E48 /* string+EXT.swift */,
 				B2E6508727801DA3001574B8 /* Helper+Ext.swift */,
 				B2E6508827801DA3001574B8 /* UIView.swift */,
 			);
@@ -172,7 +179,6 @@
 			children = (
 				B2E650B127801EC7001574B8 /* SearchDetails */,
 				B2E650A827801EA1001574B8 /* SearchVC */,
-				B2E6507227801D15001574B8 /* ViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -214,6 +220,14 @@
 			path = SearchCell;
 			sourceTree = "<group>";
 		};
+		B2F25F9F278177BD003D8E48 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				B2E650D027801F52001574B8 /* Search.storyboard */,
+			);
+			name = StoryBoard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,6 +244,11 @@
 			dependencies = (
 			);
 			name = "The Same  Search Apple Music";
+			packageProductDependencies = (
+				B2F25F8B27816D50003D8E48 /* IQKeyboardManagerSwift */,
+				B2F25F8F27816D73003D8E48 /* Toast */,
+				B2F25F9327816DAB003D8E48 /* SDWebImage */,
+			);
 			productName = "The Same  Search Apple Music";
 			productReference = B2E6506B27801D14001574B8 /* The Same  Search Apple Music.app */;
 			productType = "com.apple.product-type.application";
@@ -257,6 +276,11 @@
 				Base,
 			);
 			mainGroup = B2E6506227801D14001574B8;
+			packageReferences = (
+				B2F25F8A27816D50003D8E48 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				B2F25F8E27816D73003D8E48 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				B2F25F9227816DAB003D8E48 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = B2E6506C27801D14001574B8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -276,7 +300,6 @@
 				B2E650BA27801EEF001574B8 /* SearchCell.xib in Resources */,
 				B2E6507827801D15001574B8 /* Assets.xcassets in Resources */,
 				B2E650D127801F53001574B8 /* Search.storyboard in Resources */,
-				B2E6507627801D15001574B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,32 +315,25 @@
 				B2E6508A27801DA4001574B8 /* UIView.swift in Sources */,
 				B2E650AC27801EAB001574B8 /* SearchVC.swift in Sources */,
 				B2E650A427801E36001574B8 /* SearchResult.swift in Sources */,
-				B2E6507327801D15001574B8 /* ViewController.swift in Sources */,
 				B2E650C027801EF9001574B8 /* SearchDetailsCell.swift in Sources */,
 				B2E650A027801E2C001574B8 /* NetworkManger.swift in Sources */,
 				B2E6509127801DC4001574B8 /* Constant.swift in Sources */,
 				B2E650AD27801EAB001574B8 /* SearchVCSearchDelegate+Ext.swift in Sources */,
 				B2E650AE27801EAB001574B8 /* SearchVCTableView+Ext.swift in Sources */,
 				B2E6509227801DC4001574B8 /* BetterSnappingLayout.swift in Sources */,
+				B2F25F9927816E0B003D8E48 /* string+EXT.swift in Sources */,
 				B2E6508927801DA4001574B8 /* Helper+Ext.swift in Sources */,
 				B2E6509327801DC4001574B8 /* ResoneError.swift in Sources */,
 				B2E650B527801ED0001574B8 /* SearchDetailsCollectionView+Ext.swift in Sources */,
 				B2E650A527801E36001574B8 /* DataResult.swift in Sources */,
 				B2E6506F27801D15001574B8 /* AppDelegate.swift in Sources */,
+				B2F25F9A27816E0B003D8E48 /* date+EXT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B2E6507427801D15001574B8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B2E6507527801D15001574B8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B2E6507927801D15001574B8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -505,6 +521,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B2F25F8A27816D50003D8E48 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.9;
+			};
+		};
+		B2F25F8E27816D73003D8E48 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		B2F25F9227816DAB003D8E48 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.12.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B2F25F8B27816D50003D8E48 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2F25F8A27816D50003D8E48 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		B2F25F8F27816D73003D8E48 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2F25F8E27816D73003D8E48 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+		B2F25F9327816DAB003D8E48 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2F25F9227816DAB003D8E48 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B2E6506327801D14001574B8 /* Project object */;
 }

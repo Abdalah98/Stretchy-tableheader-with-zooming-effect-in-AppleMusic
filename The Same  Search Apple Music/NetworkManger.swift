@@ -13,29 +13,6 @@ class NetworkManger {
     
 
     
-    func getTopSongs(completion: @escaping (Result<DataofSongs , ResoneError>) -> Void){
-        fetchGenericJSONData(urlString:URLS.topSongs , completion: completion)
-    }
-
-    
-    func getTopAlbums(completion: @escaping (Result<DataofSongs , ResoneError>) -> Void){
-        fetchGenericJSONData(urlString:URLS.topAlbums , completion: completion)
-    }
-    
-    func getNewReleases(completion: @escaping (Result<DataofSongs , ResoneError>) -> Void){
-        fetchGenericJSONData(urlString:URLS.newReleases , completion: completion)
-    }
-    
-    
-    func getHotTracks(completion: @escaping (Result<DataofSongs , ResoneError>) -> Void){
-        fetchGenericJSONData(urlString:URLS.hotTracks , completion: completion)
-    }
-    
-    func getComingSoon(completion: @escaping (Result<DataofSongs , ResoneError>) -> Void){
-        fetchGenericJSONData(urlString:URLS.comingSoon , completion: completion)
-    }
-    
-    
     func searchResultMusic(searchText:String,completion: @escaping (Result<SearchResult , ResoneError>) -> Void){
         let urlString = "https://itunes.apple.com/search?term=\(searchText)&entity=musicVideo"
            // URLS.main + "/search?term=\(searchText)&entity=musicVeido"

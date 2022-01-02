@@ -9,7 +9,7 @@ import UIKit
 import AVKit
 import SDWebImage
 
-class SearchDetails: UIViewController {
+class SearchDetails: UITableViewController {
     
     @IBOutlet weak var CollectionView: UICollectionView!
     @IBOutlet weak var artistImage: UIImageView!
@@ -30,11 +30,20 @@ class SearchDetails: UIViewController {
 
     var avpController = AVPlayerViewController()
     var player: AVPlayer?
+    var headerView: UIView!
+    let headerHeight: CGFloat = 300
     
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollection()
+        headerView = tableView.tableHeaderView
+        tableView.tableHeaderView = nil
+        tableView.addSubview(headerView)
+        tableView.contentInset = UIEdgeInsets(top: headerHeight, left: 0, bottom: 0, right: 0)
+        tableView.contentOffset = CGPoint(x: 0, y: -headerHeight)
+        updateHeader()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,6 +63,7 @@ class SearchDetails: UIViewController {
         trackPrice.text = "\(String(musicDetails?.trackPrice ?? 0 )) USD"
         releaseDate.text = musicDetails?.releaseDate?.convertToDisplayFormat()
         showLoadingView()
+      
         NetworkManger.shared.searchResultMusic(searchText: musicDetails?.artistName ?? "") { [weak self] result in
             guard let self = self else{return}
             self.dismissLoadingView()
@@ -102,6 +112,26 @@ class SearchDetails: UIViewController {
     @IBAction func artistUrlAction(_ sender: Any) {
         goSafari(urlString: urlArtistMusic)
     }
+ 
     
+    func updateHeader() {
+        print(tableView.contentOffset.y)
+        if tableView.contentOffset.y < -headerHeight {
+            headerView.frame.origin.y = tableView.contentOffset.y
+            headerView.frame.size.height = -tableView.contentOffset.y
+        }
+    }
+
+   
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        updateHeader()
+    }
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        if msuicName.isEmpty{
+//            CollectionView.isHidden = true
+//            
+//        }
+//    }
 }
 
