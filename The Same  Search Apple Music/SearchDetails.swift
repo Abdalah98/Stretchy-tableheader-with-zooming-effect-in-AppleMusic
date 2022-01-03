@@ -120,7 +120,7 @@ class SearchDetails: UITableViewController {
  
     
     func updateHeader() {
-        print(tableView.contentOffset.y)
+     //   print(tableView.contentOffset.y)
         if tableView.contentOffset.y < -headerHeight {
             headerView.frame.origin.y = tableView.contentOffset.y
             headerView.frame.size.height = -tableView.contentOffset.y
