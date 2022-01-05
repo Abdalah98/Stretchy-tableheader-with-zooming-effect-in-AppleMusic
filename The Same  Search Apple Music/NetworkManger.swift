@@ -10,10 +10,16 @@ import Foundation
 class NetworkManger {
     
     static let shared = NetworkManger()
-    
-
+   // "https://itunes.apple.com/search?term=\(searchText)&entity=musicVideo"
     func searchResultMusic(searchText:String,completion: @escaping (Result<SearchResult , ResoneError>) -> Void){
-        let urlString = "https://itunes.apple.com/search?term=\(searchText)&entity=musicVideo"
+        let urlString =     "https://itunes.apple.com/search?term=\(searchText)&media=music"
+
+        fetchGenericJSONData(urlString: urlString, completion: completion)
+    }
+    
+    func searchResultMusicVideo(searchText:String,completion: @escaping (Result<SearchResult , ResoneError>) -> Void){
+        let urlString =     "https://itunes.apple.com/search?term=\(searchText)&entity=musicVideo"
+
         fetchGenericJSONData(urlString: urlString, completion: completion)
     }
     

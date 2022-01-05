@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B22F92AA2785714E008908CF /* TopMusicVideoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22F92A92785714E008908CF /* TopMusicVideoTableView.swift */; };
 		B2E6506F27801D15001574B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E6506E27801D15001574B8 /* AppDelegate.swift */; };
 		B2E6507827801D15001574B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E6507727801D15001574B8 /* Assets.xcassets */; };
 		B2E6507B27801D15001574B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2E6507927801D15001574B8 /* LaunchScreen.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B22F92A92785714E008908CF /* TopMusicVideoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMusicVideoTableView.swift; sourceTree = "<group>"; };
 		B2E6506B27801D14001574B8 /* The Same  Search Apple Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Same  Search Apple Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E6506E27801D15001574B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2E6507727801D15001574B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				B2E650A927801EAB001574B8 /* SearchVC.swift */,
 				B2E650AA27801EAB001574B8 /* SearchVCSearchDelegate+Ext.swift */,
 				B2E650AB27801EAB001574B8 /* SearchVCTableView+Ext.swift */,
+				B22F92A92785714E008908CF /* TopMusicVideoTableView.swift */,
 			);
 			path = SearchVC;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				B2E650AD27801EAB001574B8 /* SearchVCSearchDelegate+Ext.swift in Sources */,
 				B2E650AE27801EAB001574B8 /* SearchVCTableView+Ext.swift in Sources */,
 				B2E6509227801DC4001574B8 /* BetterSnappingLayout.swift in Sources */,
+				B22F92AA2785714E008908CF /* TopMusicVideoTableView.swift in Sources */,
 				B2F25F9927816E0B003D8E48 /* string+EXT.swift in Sources */,
 				B2E6508927801DA4001574B8 /* Helper+Ext.swift in Sources */,
 				B2E6509327801DC4001574B8 /* ResoneError.swift in Sources */,

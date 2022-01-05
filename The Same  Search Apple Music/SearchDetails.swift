@@ -9,6 +9,30 @@ import UIKit
 import AVKit
 import SDWebImage
 
+
+
+
+extension TimeInterval {
+    var hourMinuteSecondMS: String {
+        String(format:"%d:%02d:%02d.%03d", hour, minute, second, millisecond)
+    }
+    var minuteSecondMS: String {
+        String(format:"%d:%02d.%03d", minute, second, millisecond)
+    }
+    var hour: Int {
+        Int((self/3600).truncatingRemainder(dividingBy: 3600))
+    }
+    var minute: Int {
+        Int((self/60).truncatingRemainder(dividingBy: 60))
+    }
+    var second: Int {
+        Int(truncatingRemainder(dividingBy: 60))
+    }
+    var millisecond: Int {
+        Int((self*1000).truncatingRemainder(dividingBy: 1000))
+    }
+}
+
 class SearchDetails: UITableViewController {
     
     @IBOutlet weak var CollectionView: UICollectionView!
@@ -16,13 +40,12 @@ class SearchDetails: UITableViewController {
     @IBOutlet weak var nameArtist: UILabel!
     @IBOutlet weak var trackNameLabel: UILabel!
     @IBOutlet weak var musicVideoView: UIView!
-    @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var trackPrice: UILabel!
     @IBOutlet weak var releaseDate: UILabel!
     @IBOutlet weak var country: UILabel!
     @IBOutlet weak var primaryGenreName: UILabel!
-    @IBOutlet weak var palyButton: UIButton!
     
+    @IBOutlet weak var palyPauseButton: UIButton!
     
     var msuicName = [DataResult]()
     var musicDetails: DataResult?
@@ -49,6 +72,9 @@ class SearchDetails: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchMusicData()
+        let tarckTime = musicDetails?.trackTimeMillis
+       // let time = tarckTime.minuteSecondMS
+     //   print(musicDetails?.trackTimeMillis.toDisplayString())
     }
     
     
@@ -56,8 +82,7 @@ class SearchDetails: UITableViewController {
     fileprivate func fetchMusicData() {
         contingDataView()
         showLoadingView()
-      
-        NetworkManger.shared.searchResultMusic(searchText: musicDetails?.artistName ?? "") { [weak self] result in
+        NetworkManger.shared.searchResultMusicVideo(searchText: musicDetails?.artistName ?? "") { [weak self] result in
             guard let self = self else{return}
             self.dismissLoadingView()
             switch result {
@@ -93,25 +118,23 @@ class SearchDetails: UITableViewController {
         guard  let url = URL(string:urlString) else {return}
         player = AVPlayer(url: url)
         avpController.player = player
-        avpController.view.frame.size.height = musicVideoView.frame.size.height
-        avpController.view.frame.size.width = musicVideoView.frame.size.width
-        self.musicVideoView.addSubview(avpController.view)
+
     }
     
+   
     
-    @IBAction func playButtonAction(_ sender: Any) {
-        palyButton.isEnabled  = false
-        stopButton.isEnabled  = true
+    @IBAction func palyPauseAction(_ sender: Any) {
+        if palyPauseButton.isSelected {
+        palyPauseButton.setImage(UIImage(named: "pause.fill"), for: .normal)
+            player?.pause()
+
+       print("ss")
+        }
+        palyPauseButton.setImage( UIImage(named: "play.fill"), for: .selected)
+        print("ssssssss")
         player?.play()
     }
     
-    
-    @IBAction func stopButtonAction(_ sender: Any) {
-        palyButton.isEnabled  = true
-        stopButton.isEnabled  = false
-        player?.pause()
-        
-    }
     
     
     @IBAction func artistUrlAction(_ sender: Any) {
@@ -120,7 +143,6 @@ class SearchDetails: UITableViewController {
  
     
     func updateHeader() {
-     //   print(tableView.contentOffset.y)
         if tableView.contentOffset.y < -headerHeight {
             headerView.frame.origin.y = tableView.contentOffset.y
             headerView.frame.size.height = -tableView.contentOffset.y

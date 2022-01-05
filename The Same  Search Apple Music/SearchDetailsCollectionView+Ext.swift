@@ -20,7 +20,7 @@ extension SearchDetails : UICollectionViewDelegate, UICollectionViewDataSource,U
      func snapHorizontal(){
         CollectionView.delegate = self
         CollectionView.dataSource = self
-       CollectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
+        CollectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
         CollectionView.decelerationRate = .fast
         let layout = BetterSnappingLayout()
         layout.scrollDirection = .horizontal
@@ -54,5 +54,29 @@ extension SearchDetails : UICollectionViewDelegate, UICollectionViewDataSource,U
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 12, left: 16, bottom: 12, right: 16)
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        performSegue(withIdentifier: Constant.goShowMsuicVideo, sender: self)
+//            
+//        }
+     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailsController = TopMusicVideoTableView()
+        
+        detailsController.musicVideoDetails = self.msuicName[indexPath.item]
+        navigationController?.pushViewController(detailsController, animated: true)
+        
+    }
+        //MARK: - prepareSegue
+//        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//            if segue.identifier == Constant.goShowMsuicVideo {
+//                let detailsController = segue.destination as! TopMusicVideoTableView
+//                    detailsController.musicVideoDetails = msuicName
+//                }else{
+//                    return print("error")
+//                }
+//            }
+//        }
+//
+//
     
 }
