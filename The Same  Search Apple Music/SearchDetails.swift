@@ -51,6 +51,7 @@ class SearchDetails: UITableViewController {
     var musicDetails: DataResult?
     
     var urlArtistMusic = ""
+    var palyPause:Bool = true
 
     var avpController = AVPlayerViewController()
     var player: AVPlayer?
@@ -121,18 +122,21 @@ class SearchDetails: UITableViewController {
 
     }
     
-   
+
     
     @IBAction func palyPauseAction(_ sender: Any) {
-        if palyPauseButton.isSelected {
-        palyPauseButton.setImage(UIImage(named: "pause.fill"), for: .normal)
+        palyPause = !palyPause
+           if palyPause {
+            palyPauseButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
             player?.pause()
 
-       print("ss")
-        }
-        palyPauseButton.setImage( UIImage(named: "play.fill"), for: .selected)
-        print("ssssssss")
-        player?.play()
+           } else {
+            palyPauseButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+
+            player?.play()
+
+           }
+
     }
     
     
