@@ -55,28 +55,15 @@ extension SearchDetails : UICollectionViewDelegate, UICollectionViewDataSource,U
         return UIEdgeInsets(top: 12, left: 16, bottom: 12, right: 16)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: Constant.goShowMsuicVideo, sender: self)
-//            
-//        }
+
      func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailsController = TopMusicVideoTableView()
-        
-        detailsController.musicVideoDetails = self.msuicName[indexPath.item]
-        navigationController?.pushViewController(detailsController, animated: true)
-        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Search", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier:  "TopMusicVideoVC") as! TopMusicVideoVC
+        vc.musicVideoDetails = self.msuicName[indexPath.item]
+
+        self.navigationController?.pushViewController(vc, animated: true)
+
+
     }
-        //MARK: - prepareSegue
-//        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//            if segue.identifier == Constant.goShowMsuicVideo {
-//                let detailsController = segue.destination as! TopMusicVideoTableView
-//                    detailsController.musicVideoDetails = msuicName
-//                }else{
-//                    return print("error")
-//                }
-//            }
-//        }
-//
-//
-    
+
 }
