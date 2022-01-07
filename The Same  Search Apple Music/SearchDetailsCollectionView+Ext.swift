@@ -28,7 +28,9 @@ extension SearchDetails : UICollectionViewDelegate, UICollectionViewDataSource,U
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        print(msuicName.count)
         return msuicName.count
     }
     
@@ -57,8 +59,8 @@ extension SearchDetails : UICollectionViewDelegate, UICollectionViewDataSource,U
     
 
      func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Search", bundle: nil)
-        let vc = storyBoard.instantiateViewController(withIdentifier:  "TopMusicVideoVC") as! TopMusicVideoVC
+        let storyBoard: UIStoryboard = UIStoryboard(name: Constant.detailsTopMusicVideo, bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: Constant.topMusicVideoVC) as! DetailsTopMusicVideoVC
         vc.musicVideoDetails = self.msuicName[indexPath.item]
 
         self.navigationController?.pushViewController(vc, animated: true)

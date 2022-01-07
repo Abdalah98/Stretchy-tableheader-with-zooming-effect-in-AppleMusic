@@ -17,7 +17,12 @@ enum Constant {
     static let searchCell                  			= "SearchCell"
     static let goDetailsMusicVideo                  = "GoDetailsMusicVideo"
     static let searchDetailsCell                    = "SearchDetailsCell"
-    static let goShowMsuicVideo                      = "goTopVideo"
-    }
+    static let detailsTopMusicVideo                 = "DetailsTopMusicVideo"
+    static let search                               = "Search"
+    static let topMusicVideoCell                    = "TopMusicVideoCell"
+    static let topMusicVideoVC                      = "TopMusicVideoVC"
+    static let TopMusicVideo                        = "TopMusicVideo"
 
+    
+    }
 

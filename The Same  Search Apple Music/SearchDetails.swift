@@ -10,29 +10,6 @@ import AVKit
 import SDWebImage
 
 
-
-
-extension TimeInterval {
-    var hourMinuteSecondMS: String {
-        String(format:"%d:%02d:%02d.%03d", hour, minute, second, millisecond)
-    }
-    var minuteSecondMS: String {
-        String(format:"%d:%02d.%03d", minute, second, millisecond)
-    }
-    var hour: Int {
-        Int((self/3600).truncatingRemainder(dividingBy: 3600))
-    }
-    var minute: Int {
-        Int((self/60).truncatingRemainder(dividingBy: 60))
-    }
-    var second: Int {
-        Int(truncatingRemainder(dividingBy: 60))
-    }
-    var millisecond: Int {
-        Int((self*1000).truncatingRemainder(dividingBy: 1000))
-    }
-}
-
 class SearchDetails: UITableViewController {
     
     @IBOutlet weak var CollectionView: UICollectionView!
@@ -72,10 +49,9 @@ class SearchDetails: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
         fetchMusicData()
-        let tarckTime = musicDetails?.trackTimeMillis
-       // let time = tarckTime.minuteSecondMS
-     //   print(musicDetails?.trackTimeMillis.toDisplayString())
+   
     }
     
     
@@ -83,6 +59,7 @@ class SearchDetails: UITableViewController {
     fileprivate func fetchMusicData() {
         contingDataView()
         showLoadingView()
+        
         NetworkManger.shared.searchResultMusicVideo(searchText: musicDetails?.artistName ?? "") { [weak self] result in
             guard let self = self else{return}
             self.dismissLoadingView()
@@ -166,5 +143,14 @@ class SearchDetails: UITableViewController {
         updateHeader()
     }
 
+    @IBAction func sellAllAction(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: Constant.TopMusicVideo, bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: Constant.TopMusicVideo) as! TopMusicVideoTableView
+        vc.artustName = musicDetails?.artistName ?? ""
+
+        self.navigationController?.pushViewController(vc, animated: true)
+
+
+    }
 }
 

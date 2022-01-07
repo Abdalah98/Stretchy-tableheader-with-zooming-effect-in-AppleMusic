@@ -8,7 +8,7 @@
 import UIKit
 import AVKit
 import SDWebImage
-class TopMusicVideoVC: UIViewController {
+class DetailsTopMusicVideoVC: UIViewController {
 
     @IBOutlet weak var trackNameLabel: UILabel!
     @IBOutlet weak var musicVideoView: UIView!
@@ -39,7 +39,11 @@ class TopMusicVideoVC: UIViewController {
         contingDataView()
     }
  
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+   
+    }
     
   
     

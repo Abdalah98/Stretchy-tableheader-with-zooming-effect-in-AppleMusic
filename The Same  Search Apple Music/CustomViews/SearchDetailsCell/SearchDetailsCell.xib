@@ -37,33 +37,46 @@
                         </constraints>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Hap-zg-MFn">
-                        <rect key="frame" x="62" y="13.5" width="277" height="43.5"/>
+                        <rect key="frame" x="62" y="13.5" width="243" height="43.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3V-6C-i9l">
-                                <rect key="frame" x="0.0" y="0.0" width="277" height="21.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="243" height="21.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0W-dC-9EX">
-                                <rect key="frame" x="0.0" y="24.5" width="277" height="19"/>
+                                <rect key="frame" x="0.0" y="24.5" width="243" height="19"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                     </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvm-un-Fes">
+                        <rect key="frame" x="313" y="20" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="8Cl-xX-cul"/>
+                            <constraint firstAttribute="width" constant="30" id="r4h-bn-JWL"/>
+                        </constraints>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <state key="normal" image="chevron.forward" catalog="system">
+                            <color key="titleColor" systemColor="labelColor"/>
+                        </state>
+                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="Apu-5i-QXr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="60" id="3i4-mu-AIB"/>
-                <constraint firstAttribute="trailing" secondItem="Hap-zg-MFn" secondAttribute="trailing" constant="16" id="3iw-RX-9jk"/>
+                <constraint firstAttribute="trailing" secondItem="Hap-zg-MFn" secondAttribute="trailing" constant="50" id="3iw-RX-9jk"/>
+                <constraint firstItem="Bvm-un-Fes" firstAttribute="centerY" secondItem="liI-kC-8LG" secondAttribute="centerY" id="CWF-5o-GsP"/>
                 <constraint firstAttribute="trailing" secondItem="Apu-5i-QXr" secondAttribute="trailing" constant="16" id="GDR-d8-4ox"/>
                 <constraint firstItem="liI-kC-8LG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="JuB-kp-3wa"/>
                 <constraint firstItem="Apu-5i-QXr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KlR-S0-cmS"/>
                 <constraint firstItem="Hap-zg-MFn" firstAttribute="centerY" secondItem="liI-kC-8LG" secondAttribute="centerY" id="OFK-Tn-aBT"/>
                 <constraint firstItem="Hap-zg-MFn" firstAttribute="leading" secondItem="liI-kC-8LG" secondAttribute="trailing" constant="12" id="epL-qM-iDt"/>
+                <constraint firstAttribute="trailing" secondItem="Bvm-un-Fes" secondAttribute="trailing" constant="12" id="rCs-tk-wce"/>
                 <constraint firstItem="liI-kC-8LG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sZT-Sy-nMc"/>
             </constraints>
             <size key="customSize" width="355" height="69"/>
@@ -72,10 +85,14 @@
                 <outlet property="imageArtist" destination="liI-kC-8LG" id="7Zj-AU-7Il"/>
                 <outlet property="trackName" destination="G3V-6C-i9l" id="cat-k2-zZM"/>
             </connections>
-            <point key="canvasLocation" x="231.15942028985509" y="35.825892857142854"/>
+            <point key="canvasLocation" x="-88" y="-22"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
