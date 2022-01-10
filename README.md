@@ -32,5 +32,6 @@ The app has several main features:
 https://user-images.githubusercontent.com/41602889/148718512-20f82e5d-48d2-41da-84d2-b0baa370e050.mov
 
 ## MusicViedo
+![ezgif com-gif-maker-2](https://user-images.githubusercontent.com/41602889/148718504-18f8ea60-ef55-4a47-83ae-7745d80977e4.gif)
 
 
