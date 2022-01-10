@@ -29,7 +29,7 @@ The app has several main features:
 ## Gif about the run app 
 
 ## Search
-https://user-images.githubusercontent.com/41602889/148718512-20f82e5d-48d2-41da-84d2-b0baa370e050.mov
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/41602889/148719304-8064757b-e638-4df2-8199-a4c24f84691a.gif)
 
 ## MusicViedo
 ![ezgif com-gif-maker-2](https://user-images.githubusercontent.com/41602889/148718504-18f8ea60-ef55-4a47-83ae-7745d80977e4.gif)
